@@ -116,15 +116,15 @@ export const site: SiteConfig = {
       bullets: [
         "Tap-based UX: animal icons, trait chips, theme tiles (minimal typing)",
         "Photo auto-detect → preselects species, manual override available",
-        "Clean JSON API; low-cost, high-velocity stack (FastAPI, Mistral, Netlify/Docker)",
+        "Clean JSON API; low-cost, high-velocity stack (FastAPI, OpenRouter, Netlify/Docker)",
       ],
       techLines: [
         "Frontend: React + Tailwind (Lovable/Bolt-compatible)",
-        "Backend: FastAPI with a low-cost LLM (Mistral-small) and a free-tier image-classification API to auto-detect the animal from a photo",
+        "Backend: FastAPI with OpenRouter using openai/gpt-oss-20b:free model and a free-tier image-classification API to auto-detect the animal from a photo",
         "Deployment: Lightweight hosting for near-zero ops and easy scaling",
       ],
-      tags: ["AI", "Mistral", "FastAPI", "React", "Tailwind"],
-      link: "#",
+      tags: ["AI", "OpenRouter", "FastAPI", "React", "Tailwind"],
+      link: "https://github.com/midhiman-dev/nomorapaw",
       image: projectNomorapaw,
     },
     {
