@@ -1,5 +1,5 @@
 import projectKisan from "@/assets/project-kisan.jpg";
-import projectNomorapaw from "@/assets/project-nomorapaw.jpg";
+import projectNomorapaw from "@/assets/nomorapaw-interface.jpg";
 import projectPromptsharp from "@/assets/project-promptsharp.jpg";
 
 export interface Project {
