@@ -85,6 +85,10 @@ export const site: SiteConfig = {
       title: "Google Cloud Digital Leader",
       context: "Cloud strategy and product leadership on GCP",
     },
+    {
+      title: "GitHub Copilot",
+      context: "Microsoft certification in AI-assisted development and prompt engineering",
+    },
   ],
   projects: [
     {
