@@ -10,7 +10,7 @@ const iconMap: Record<string, React.ElementType> = {
 
 export default function StatsRow() {
   return (
-    <section aria-label="Architecture Signature" className="border-b bg-muted/30">
+    <section id="approach" aria-label="Architecture Signature" className="scroll-mt-28 border-b bg-muted/30">
       <div className="mx-auto max-w-6xl px-4 py-10">
         <h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
           Architecture Signature

@@ -6,25 +6,31 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const sections = [
-  { id: "about", label: "Approach" },
-  { id: "projects", label: "Work" },
-  { id: "skills", label: "Capabilities" },
-  { id: "certifications", label: "About" },
-  { id: "contact", label: "Connect" },
+  { id: "approach", label: "Approach" },
+  { id: "work", label: "Work" },
+  { id: "capabilities", label: "Capabilities" },
+  { id: "about", label: "About" },
+  { id: "connect", label: "Connect" },
 ];
 
 export default function Navbar() {
-  const active = useScrollSpy(
-    sections.map((s) => s.id),
+  const activeSection = useScrollSpy(
+    ["hero", ...sections.map((s) => s.id)],
     120
   );
+  const [scrollY, setScrollY] = useState(0);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setOpen(false);
+    const onScroll = () => {
+      setOpen(false);
+      setScrollY(window.scrollY);
+    };
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const active = scrollY < 150 ? "" : activeSection;
 
   return (
     <header className="fixed top-0 z-50 w-full border-b bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60">

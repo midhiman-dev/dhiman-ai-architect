@@ -23,7 +23,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" aria-label="Architecture Capabilities" className="scroll-mt-28 border-b">
+    <section id="capabilities" aria-label="Architecture Capabilities" className="scroll-mt-28 border-b">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
         <h2 className="text-2xl font-semibold tracking-tight text-foreground">
           Architecture Capabilities

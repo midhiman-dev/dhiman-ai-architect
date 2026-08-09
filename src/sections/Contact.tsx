@@ -4,7 +4,7 @@ import { Linkedin, Github, MapPin } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section id="contact" aria-label="Connect" className="scroll-mt-28 border-b">
+    <section id="connect" aria-label="Connect" className="scroll-mt-28 border-b">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
         <div className="max-w-2xl">
           <h2 className="text-2xl font-semibold tracking-tight text-foreground">
