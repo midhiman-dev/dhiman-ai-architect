@@ -5,7 +5,6 @@ import About from "@/sections/About";
 import Skills from "@/sections/Skills";
 import Certifications from "@/sections/Certifications";
 import Projects from "@/sections/Projects";
-import Volunteering from "@/sections/Volunteering";
 import Contact from "@/sections/Contact";
 import Footer from "@/sections/Footer";
 
@@ -16,11 +15,10 @@ const Index = () => {
       <main>
         <Hero />
         <StatsRow />
-        <About />
-        <Skills />
-        <Certifications />
         <Projects />
-        <Volunteering />
+        <Skills />
+        <About />
+        <Certifications />
         <Contact />
       </main>
       <Footer />

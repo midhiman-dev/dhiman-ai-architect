@@ -6,22 +6,31 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const sections = [
+  { id: "approach", label: "Approach" },
+  { id: "work", label: "Work" },
+  { id: "capabilities", label: "Capabilities" },
   { id: "about", label: "About" },
-  { id: "skills", label: "Skills" },
-  { id: "certifications", label: "Certifications" },
-  { id: "projects", label: "Projects" },
-  { id: "contact", label: "Contact" },
+  { id: "connect", label: "Connect" },
 ];
 
 export default function Navbar() {
-  const active = useScrollSpy(sections.map((s) => s.id), 120);
+  const activeSection = useScrollSpy(
+    ["hero", ...sections.map((s) => s.id)],
+    120
+  );
+  const [scrollY, setScrollY] = useState(0);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setOpen(false);
+    const onScroll = () => {
+      setOpen(false);
+      setScrollY(window.scrollY);
+    };
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const active = scrollY < 150 ? "" : activeSection;
 
   return (
     <header className="fixed top-0 z-50 w-full border-b bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -33,14 +42,14 @@ export default function Navbar() {
         <button className="sm:hidden" aria-label="Toggle menu" onClick={() => setOpen((o) => !o)}>
           {open ? <X /> : <Menu />}
         </button>
-        <ul className={cn("hidden items-center gap-1 sm:flex")}> 
+        <ul className={cn("hidden items-center gap-1 sm:flex")}>
           {sections.map((s) => (
             <li key={s.id}>
               <a
                 href={`#${s.id}`}
                 className={cn(
                   "rounded-md px-3 py-2 text-sm transition-colors",
-                  active === s.id ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                  active === s.id ? "font-medium text-primary" : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 {s.label}
@@ -48,9 +57,11 @@ export default function Navbar() {
             </li>
           ))}
           <li className="ml-2">
-            <a href={site.social.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
-              <Button variant="outline" size="sm">LinkedIn</Button>
-            </a>
+            <Button asChild variant="outline" size="sm">
+              <a href={site.social.linkedin} target="_blank" rel="noreferrer">
+                LinkedIn
+              </a>
+            </Button>
           </li>
         </ul>
       </nav>
@@ -63,7 +74,7 @@ export default function Navbar() {
                   href={`#${s.id}`}
                   className={cn(
                     "block rounded-md px-3 py-2 text-sm transition-colors",
-                    active === s.id ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                    active === s.id ? "font-medium text-primary" : "text-muted-foreground hover:text-foreground"
                   )}
                 >
                   {s.label}
