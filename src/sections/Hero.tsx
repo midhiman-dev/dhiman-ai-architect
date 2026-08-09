@@ -28,32 +28,30 @@ export default function Hero() {
             {site.summary}
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a href="#work" aria-label="View Selected Work">
-              <Button size="lg" className="group">
+            <Button asChild size="lg" className="group">
+              <a href="#work">
                 View Selected Work
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </Button>
-            </a>
-            <a
-              href={site.social.github}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub profile"
-            >
-              <Button variant="outline" size="lg">
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <a
+                href={site.social.github}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Github className="mr-2 h-4 w-4" /> GitHub
-              </Button>
-            </a>
-            <a
-              href={site.social.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn profile"
-            >
-              <Button variant="outline" size="lg">
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <a
+                href={site.social.linkedin}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
-              </Button>
-            </a>
+              </a>
+            </Button>
           </div>
         </div>
       </div>

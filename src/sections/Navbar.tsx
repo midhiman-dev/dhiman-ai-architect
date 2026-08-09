@@ -57,9 +57,11 @@ export default function Navbar() {
             </li>
           ))}
           <li className="ml-2">
-            <a href={site.social.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
-              <Button variant="outline" size="sm">LinkedIn</Button>
-            </a>
+            <Button asChild variant="outline" size="sm">
+              <a href={site.social.linkedin} target="_blank" rel="noreferrer">
+                LinkedIn
+              </a>
+            </Button>
           </li>
         </ul>
       </nav>
