@@ -6,15 +6,18 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const sections = [
-  { id: "about", label: "About" },
-  { id: "skills", label: "Skills" },
-  { id: "certifications", label: "Certifications" },
-  { id: "projects", label: "Projects" },
-  { id: "contact", label: "Contact" },
+  { id: "about", label: "Approach" },
+  { id: "projects", label: "Work" },
+  { id: "skills", label: "Capabilities" },
+  { id: "certifications", label: "About" },
+  { id: "contact", label: "Connect" },
 ];
 
 export default function Navbar() {
-  const active = useScrollSpy(sections.map((s) => s.id), 120);
+  const active = useScrollSpy(
+    sections.map((s) => s.id),
+    120
+  );
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -33,14 +36,14 @@ export default function Navbar() {
         <button className="sm:hidden" aria-label="Toggle menu" onClick={() => setOpen((o) => !o)}>
           {open ? <X /> : <Menu />}
         </button>
-        <ul className={cn("hidden items-center gap-1 sm:flex")}> 
+        <ul className={cn("hidden items-center gap-1 sm:flex")}>
           {sections.map((s) => (
             <li key={s.id}>
               <a
                 href={`#${s.id}`}
                 className={cn(
                   "rounded-md px-3 py-2 text-sm transition-colors",
-                  active === s.id ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                  active === s.id ? "font-medium text-primary" : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 {s.label}
@@ -63,7 +66,7 @@ export default function Navbar() {
                   href={`#${s.id}`}
                   className={cn(
                     "block rounded-md px-3 py-2 text-sm transition-colors",
-                    active === s.id ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                    active === s.id ? "font-medium text-primary" : "text-muted-foreground hover:text-foreground"
                   )}
                 >
                   {s.label}
