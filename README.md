@@ -1,73 +1,366 @@
-# Welcome to your Lovable project
+# Dhiman Manji
 
-## Project info
+## AI-native Solution Architect
 
-**URL**: https://lovable.dev/projects/ee5de009-57a6-403f-a329-fb629d68ba05
+**Enterprise AI · Agentic Systems · Modernization · .NET/Cloud**  
+**Business → Technology → Delivery**
 
-## How can I edit this code?
+I am an **Associate Consultant at CGI** with 20+ years across enterprise software delivery, application architecture, modernization, and end-to-end solution implementation.
 
-There are several ways of editing your application.
+My current focus is **AI-native solution architecture**: designing systems where AI capabilities are integrated into real workflows with explicit boundaries, deterministic controls, human authority, security, observability, and verification.
 
-**Use Lovable**
+I am particularly interested in the gap between an AI capability that works in a demo and an enterprise system that can be **integrated, governed, tested, operated, and trusted in production**.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ee5de009-57a6-403f-a329-fb629d68ba05) and start prompting.
+This repository backs my public architecture portfolio and brings together selected working systems, architecture case studies, and engineering patterns.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## How I Approach Architecture
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Enterprise fitment before AI novelty
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Start with the workflow, users, systems, constraints, and decision points. AI should be introduced where it creates meaningful value rather than added simply because a model or framework is available.
 
-Follow these steps:
+### Deterministic core, intelligent edge
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Use deterministic logic for calculations, validation, workflow state, permissions, and consequential controls. Use AI where interpretation, generation, prioritization, explanation, or assistance is genuinely valuable.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Human authority at consequential points
 
-# Step 3: Install the necessary dependencies.
-npm i
+Sensitive decisions, irreversible writes, approvals, and high-risk actions should remain attributable and reviewable.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### Integration over isolation
 
-**Edit a file directly in GitHub**
+Enterprise AI rarely operates as a standalone application. Architecture must account for existing APIs, identity systems, databases, workflows, legacy applications, security boundaries, and operational constraints.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Security, auditability, and observability by design
 
-**Use GitHub Codespaces**
+A production system should make it possible to understand what happened, which context was used, what the AI produced, what deterministic controls were applied, and where human intervention occurred.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Verification before expansion
 
-## What technologies are used for this project?
+A smaller workflow that is tested and demonstrably reliable is more valuable than a broad feature set that cannot be confidently verified.
 
-This project is built with:
+### Brownfield realism
 
-- Vite
+Most enterprise architecture happens inside existing environments. I design assuming legacy systems, imperfect data, organizational constraints, hybrid infrastructure, existing delivery standards, and real integration friction.
+
+---
+
+# Selected Architecture & Build Evidence
+
+## CarbonCoach
+
+**Bounded generative AI with a deterministic core**
+
+[View repository →](https://github.com/midhiman-dev/CarbonCoach)
+
+CarbonCoach is an AI-assisted carbon-awareness platform designed around a deliberate separation between deterministic computation and generative AI.
+
+The architecture keeps calculations, recommendations, impact bands, and progression logic outside the LLM while using Gemini for explanation and coaching.
+
+### What it demonstrates
+
+- Deterministic calculation separated from generative explanation
+- Bounded AI interaction rather than unrestricted generation
+- Custom **Numeric Invention Guard** to reject unsupported numbers generated by the model
+- Privacy minimization before context is sent to the LLM
+- API input validation and payload controls
+- Container and HTTP security hardening
+- Cloud-native deployment on Google Cloud Run
+- Automated regression and accessibility verification
+
+### Engineering evidence
+
+- **286 automated tests**
+- Approximately **94.79% statement coverage**
+- High coverage across deterministic shared-domain logic
+- Security, privacy, API-contract, accessibility, and regression tests
+- Reproducible quality gates for linting, type checking, testing, building, and container validation
+
+**Architecture signal:** probabilistic intelligence can add value without being allowed to become the system of record for deterministic facts.
+
+---
+
+## VoteReady India
+
+**Grounded AI with source-trust and deterministic safety routing**
+
+[View repository →](https://github.com/midhiman-dev/VoteReady-India)
+
+VoteReady India is a source-backed civic education application designed to simplify procedural information while maintaining a strong boundary between verified sources and generated explanation.
+
+The important architecture idea is not the conversational UI. It is the **Source-Trust Architecture** behind it.
+
+### What it demonstrates
+
+- Generative responses grounded in a controlled source registry
+- Official-source-first retrieval
+- Deterministic routing for procedural, political, and unverifiable requests
+- Source metadata presented alongside generated guidance
+- Explicit cannot-verify states rather than fabricated certainty
+- Privacy-aware analytics
+- Authentication and cloud persistence
+- Separate frontend and API deployment on Google Cloud Run
+
+### Engineering evidence
+
+- **164-test regression suite**
+- Firebase Authentication and Firestore integration
+- Runtime hardening
+- Source-registry caching
+- Lazy loading of cloud capabilities
+- Production-oriented API and frontend separation
+
+**Architecture signal:** trustworthy AI requires more than prompting—it requires source control, routing, verification, fallback behavior, and explicit handling of uncertainty.
+
+---
+
+## NFI CMDWS
+
+**Role-aware workflow and human decision architecture**
+
+[View repository →](https://github.com/midhiman-dev/NFI_CMDWS)
+
+NFI CMDWS is a **public prototype/reference implementation** exploring how a beneficiary-management workflow can move from fragmented manual processes toward a structured, role-aware digital system.
+
+The architecture emphasizes workflow state, document handling, traceability, role separation, and human decision gates.
+
+### What it demonstrates
+
+- Role-aware workflow design
+- Structured beneficiary and case-management journeys
+- Controlled document handling
+- Human review and approval stages
+- Audit-oriented workflow thinking
+- Explicit process states rather than free-form task handling
+- Architecture shaped by real operational requirements
+
+The public repository should be understood as a **prototype/reference implementation**, not as a representation of a complete production system.
+
+**Architecture signal:** enterprise architecture is often about improving workflow integrity, accountability, and information flow—not simply introducing new technology.
+
+---
+
+## AI Engineering Utilities
+
+[View repository →](https://github.com/midhiman-dev/Utilities)
+
+The Utilities repository contains smaller engineering tools created around practical development and architecture needs.
+
+Two are particularly relevant to AI engineering.
+
+### SecureLLMHarness
+
+A cross-platform **.NET 8 CLI** for validating OpenAI-compatible chat-completion endpoints across providers such as OpenAI, Azure OpenAI, OpenRouter, Groq, and local services.
+
+It includes:
+
+- Deterministic JSON-response validation
+- Provider endpoint testing
+- Batch execution
+- Latency measurement
+- Sanitized failure diagnostics
+- Cancellation handling
+- Secret-safe execution
+
+API keys are intentionally excluded from logs, result files, exception messages, and the repository.
+
+### Redact Secrets
+
+A local utility for identifying and masking sensitive values before logs or text files are shared.
+
+It detects patterns including:
+
+- Cloud and LLM provider keys
+- JWTs
+- Bearer tokens
+- Credentials embedded in URLs
+- Private-key blocks
+- Generic secret assignments
+- Optional high-entropy opaque tokens
+
+**Architecture signal:** production AI engineering also requires the surrounding reliability, diagnostic, privacy, and developer-safety tooling—not only the AI application itself.
+
+---
+
+## Additional Product Delivery
+
+### TripLedger-Nano
+
+[View repository →](https://github.com/midhiman-dev/TripLedger-Nano)
+
+TripLedger-Nano is a mobile-first travel expense and budget-management application.
+
+It provides additional evidence of end-to-end product delivery through:
+
+- Firebase Firestore persistence
+- Google authentication
+- Deterministic budget forecasting
+- Category-level budget tracking
+- Red-Amber-Green risk indication
+- Payment-source tracking
+- PDF reporting
+- Responsive product implementation
+
+It is intentionally secondary to the enterprise AI architecture work above, but demonstrates the ability to move from product idea through implementation to a usable application.
+
+---
+
+# Architecture Themes
+
+Across these projects, I am building evidence around a consistent set of architecture concerns:
+
+### AI-enabled workflows
+Using AI inside specific business journeys rather than building generic chatbot wrappers.
+
+### Deterministic + probabilistic system design
+Keeping facts, calculations, validation, policy, and workflow controls deterministic while using models for tasks suited to probabilistic intelligence.
+
+### Grounding and verification
+Designing mechanisms that constrain, validate, or provide evidence for AI-generated outputs.
+
+### Human-in-the-loop control
+Keeping consequential decisions and actions reviewable and attributable.
+
+### Governed agentic systems
+Exploring how AI agents can operate through explicit responsibilities, state, policy boundaries, controlled tools, and verification.
+
+### Enterprise integration
+Connecting AI capabilities to the applications, APIs, identities, data stores, and engineering systems where enterprise work already happens.
+
+### Brownfield modernization
+Introducing new capabilities without assuming the surrounding enterprise estate can be redesigned from scratch.
+
+### Security and auditability
+Treating secrets, permissions, data boundaries, traceability, and operational diagnostics as architecture concerns rather than post-build additions.
+
+---
+
+# Architecture Case Studies — Being Curated
+
+The portfolio is progressively moving beyond application repositories toward deeper architecture case studies.
+
+Areas currently being curated include:
+
+### Enterprise AI-assisted workflows
+
+How probabilistic generation can participate in structured enterprise processes while humans retain control over refinement, approval, and downstream actions.
+
+### Controlled enterprise-system access for AI agents
+
+Patterns for exposing enterprise capabilities to AI agents through explicit tools, permission checks, safe-write boundaries, and auditable interactions.
+
+### Governed multi-agent workflows
+
+How agent responsibilities, orchestration graphs, workflow state, policy gates, verification loops, and human approval can be combined without turning autonomy into uncontrolled execution.
+
+These case studies will focus on **architecture decisions, trade-offs, controls, verification, and lessons learned**, rather than simply documenting frameworks.
+
+---
+
+# Technology Context
+
+Technology is a means to implement architecture rather than the architecture itself.
+
+### Enterprise Application Architecture
+
+- .NET Framework
+- .NET 8–10
+- C#
+- ASP.NET Core
+- REST APIs
+- GraphQL
+- Messaging and event-driven integration
+- SQL Server
+- PostgreSQL
+- Oracle
+- Angular
 - TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
 
-## How can I deploy this project?
+### AI Systems
 
-Simply open [Lovable](https://lovable.dev/projects/ee5de009-57a6-403f-a329-fb629d68ba05) and click on Share -> Publish.
+- Generative AI
+- Grounded / retrieval-augmented patterns
+- Agentic workflows
+- AI-provider abstraction and integration
+- Evaluation and guardrail patterns
+- Human-in-the-loop workflows
+- Deterministic validation around probabilistic models
+- AI-assisted software engineering
 
-## Can I connect a custom domain to my Lovable project?
+### Cloud & Delivery
 
-Yes, you can!
+- Microsoft Azure
+- Google Cloud
+- Docker
+- GitHub
+- Azure DevOps
+- CI/CD
+- Cloud-native and hybrid delivery
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+# Professional Credentials
+
+Selected current credentials include:
+
+- **Microsoft Certified: AI Transformation Leader**
+- **Google Generative AI Leader**
+- **GitHub Copilot Certification**
+- **Google Cloud Digital Leader**
+
+Previously certified as **Microsoft Azure AI Engineer Associate**.
+
+Certifications provide useful foundations, but the primary focus of this portfolio is practical architecture and verifiable delivery evidence.
+
+---
+
+# What I Am Building Toward
+
+The goal of this portfolio is not to accumulate AI applications.
+
+It is to build a coherent body of evidence showing how I approach the transition from traditional enterprise architecture toward **AI-native enterprise systems**.
+
+That includes questions such as:
+
+- Where should AI actually participate in a workflow?
+- Which decisions should remain deterministic?
+- What authority should an AI agent receive?
+- How should enterprise tools be exposed safely?
+- Where must a human remain accountable?
+- How should generated outputs be evaluated?
+- How should uncertainty and failure be represented?
+- How can AI capabilities evolve without destabilizing the surrounding architecture?
+- How do these systems integrate with existing enterprise estates?
+
+For me, AI-native architecture is therefore not primarily about choosing a model.
+
+It is about designing the **system around the model**.
+
+---
+
+# About This Repository
+
+`dhiman-ai-architect` backs my public portfolio application.
+
+The application was created using **Lovable**, with GitHub serving as the source repository.
+
+This repository is being progressively curated as the entry point to my architecture portfolio, connecting:
+
+- Working public implementations
+- Architecture case studies
+- Engineering utilities
+- Design principles
+- Verification evidence
+- Lessons from building AI-enabled systems
+
+The portfolio will continue to evolve as additional architecture work becomes suitable for public documentation.
+
+---
+
+## GitHub
+
+Explore the broader collection of public work at:
+
+**https://github.com/midhiman-dev**
